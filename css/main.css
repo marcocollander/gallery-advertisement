@@ -1,0 +1,45 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #334455;
+}
+
+.content {
+  width: 75vw;
+  height: 90vh;
+  margin: 20px auto 0;
+  background-color: #d3d3d3;
+}
+
+.container-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70vw;
+  height: 60vh;
+  background-color: #445566;
+}
+
+.container-down {
+  width: 70vw;
+  height: 25vh;
+  background-color: #556677;
+}
+
+.display {
+  width: 50vw;
+  height: 50vh;
+  background-color: #fdfdfd;
+}
+
+.container-aside {
+  width: 20vw;
+  height: 50vh;
+  background-color: #00aaff;
+}
+/*# sourceMappingURL=main.css.map */

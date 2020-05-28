@@ -1,0 +1,37 @@
+body {
+  background-color: $color-primary;
+}
+
+.content {
+  width: 75vw;
+  height: 90vh;
+  margin: 20px auto 0;
+
+  background-color: $color-dark;
+}
+
+.container-up {
+  display: flex;
+  width: 70vw;
+  height: 60vh;
+  background-color: $color-secondary;
+}
+
+.container-down {
+  width: 70vw;
+  height: 25vh;
+  background-color: $color-third ;
+}
+
+.display {
+  width: 50vw;
+  height: 50vh;
+  background-color: $color-light-dark;
+}
+
+.container-aside {
+  width: 20vw;
+  height: 50vh;
+  background-color: $color-blue;
+}
+
