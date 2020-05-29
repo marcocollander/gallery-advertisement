@@ -1,17 +1,17 @@
 body {
-  background-color: $color-primary;
+  background-color: $color-body;
 }
 
 .content {
-  width: 45vw;
+  width: 32vw;
   height: 96vh;
   margin: 20px auto 0;
-  background-color: $color-light;
+  background-color: $color-content;
 }
 
 .container-up {
   display: flex;
-  width: 44vw;
+  width: 30vw;
   height: 50vh;
   background-color: $color-red;
 }
@@ -19,7 +19,7 @@ body {
 .display {
   width: 22vw;
   height: 50vh;
-  background-color: $color-green;
+  background-color: $color-yellow;
 }
 
 .container-aside {
@@ -29,59 +29,98 @@ body {
 }
 
 .container-down {
-  width: 44vw;
+  margin-top: 10px;
+  width: 30vw;
   height: 40vh;
-  background-color: $color-yellow;
+  background-color: $color-green;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
+  margin-top: 5px;
   width: 28vw;
   height: 13vh;
   background-color: $color-brown;
+
 }
 
 .miniature {
   margin-top: 5px;
   width: 6vw;
   height: 6vw;
-  background-color: $color-magneta;
+  background-color: $color-miniature;
+}
 
+.miniature:hover {
+  opacity: 0.5;
 }
 
 .display {
-  background-image: url(../../images/display/miniature-one.jpg);
-  background-size: cover;
-  background-position: center;
+  @include display(url(../../images/display/miniature-one.jpg));
 }
 
 .miniature-one {
-  background-image: url(../../images/miniature-one.jpg);
-  background-size: cover;
-  background-position: center;
+  @include display(url(../../images/miniature-one.jpg));
 }
 
 .miniature-two {
-  background-image: url(../../images/miniature-two.jpg);
-  background-size: cover;
-  background-position: center;
+  @include display(url(../../images/miniature-two.jpg));
 }
 
 .miniature-three {
-  background-image: url(../../images/miniature-three.jpg);
-  background-size: cover;
-  background-position: center;
+  @include display(url(../../images/miniature-three.jpg));
 }
 
 .miniature-four {
-  background-image: url(../../images/miniature-four.jpg);
-  background-size: cover;
-  background-position: center;
+  @include display(url(../../images/miniature-four.jpg));
 }
 
 .miniature-five {
-  background-image: url(../../images/miniature-five.jpg);
-  background-size: cover;
-  background-position: center;
+  @include display(url(../../images/miniature-five.jpg));
 }
+
+.miniature-six {
+  @include display(url(../../images/miniature-six.jpg));
+}
+
+.miniature-seven {
+  @include display(url(../../images/miniature-seven.jpg));
+}
+
+.miniature-eight {
+  @include display(url(../../images/miniature-eight.jpg));
+}
+
+.miniature-nine {
+  @include display(url(../../images/miniature-nine.jpg));
+}
+
+.miniature-ten {
+  @include display(url(../../images/miniature-ten.jpg));
+}
+
+.miniature-eleven {
+  @include display(url(../../images/miniature-eleven.jpg));
+}
+
+.miniature-twelve {
+  @include display(url(../../images/miniature-twelve.jpg));
+}
+
+.miniature-threeteen {
+  @include display(url(../../images/miniature-threeteen.jpg));
+}
+
+.miniature-fourteen {
+  @include display(url(../../images/miniature-fourteen.jpg));
+}
+
+.miniature-fifteen {
+  @include display(url(../../images/miniature-fifteen.jpg));
+}
+
+.miniature-sixteen {
+  @include display(url(../../images/miniature-sixteen.jpg));
+}
+
