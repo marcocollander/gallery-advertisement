@@ -62,20 +62,8 @@ body {
   width: 6vw;
   height: 6vw;
   background-color: #ff00c8;
-  border-width: 2px;
-  border-color: red;
-}
-
-.frame {
-  border-style: none;
-}
-
-.display-frame {
-  border-style: solid;
-}
-
-div.miniature.frame {
-  border-style: none;
+  border-width: 3px;
+  border-color: #ff0000;
 }
 
 .miniature:hover {

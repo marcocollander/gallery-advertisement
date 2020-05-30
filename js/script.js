@@ -1,9 +1,12 @@
+'use strict';
+
 const display = document.querySelector('.display');
 const miniature = document.getElementsByClassName('miniature');
-console.log(display);
-//display.style.backgroundImage = 'url(images/display/miniature-two.jpg)';
+
 const arrayImages =
-  ['url(images/display/miniature-one.jpg)',
+  [
+    // 'url(images/display/miniature-one.jpg)',
+    'url(images/display/miniature-one.jpg)',
     'url(images/display/miniature-two.jpg)',
     'url(images/display/miniature-three.jpg)',
     'url(images/display/miniature-four.jpg)',
@@ -19,22 +22,33 @@ const arrayImages =
     'url(images/display/miniature-fourteen.jpg)',
     'url(images/display/miniature-fifteen.jpg)',
     'url(images/display/miniature-sixteen.jpg)'];
+
 let counter = 0;
-let flag = true;
+
 setInterval(() => {
-  if (counter < arrayImages.length) {
-    display.style.backgroundImage = arrayImages[counter];
-    miniature[counter].classList.toggle('display-frame');
-  } else {
-    counter = 1;
+  if (counter === arrayImages.length) {
+    count(counter, ...miniature);
   }
 
-  counter++;
-  //miniature[counter - 1].classList.toggle('frame');
+  if (counter < arrayImages.length) {
+    if (counter >= 1) {
+      count(counter, ...miniature);
+    }
+    miniature[counter].style.borderStyle = 'solid';
+    display.style.backgroundImage = arrayImages[counter];
+    counter++;
 
-  console.log(counter);
+  } else {
+    counter = 0;
+  }
 
-}, 2000);
+}, 1000);
+
+function count(number, ...picture) {
+  number--;
+  picture[number].style.borderStyle = 'none';
+  number++;
+}
 
 
 
