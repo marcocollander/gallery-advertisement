@@ -3,50 +3,47 @@ body {
 }
 
 .content {
-  width: 32vw;
-  height: 96vh;
+  width: 41vw;
+  height: 89vh;
   margin: 20px auto 0;
   background-color: $color-content;
 }
 
 .container-up {
   display: flex;
-  width: 30vw;
+  width: 41vw;
   height: 50vh;
   background-color: $color-red;
 }
 
 .display {
-  width: 22vw;
-  height: 50vh;
+  width: 35vw;
+  height: 59vh;
   background-color: $color-yellow;
 }
 
 .container-aside {
   width: 6vw;
   height: 50vh;
-  background-color: $color-blue;
+  background-color: $color-brown;
 }
 
 .container-down {
-  margin-top: 10px;
-  width: 30vw;
-  height: 40vh;
+  width: 41vw;
+  height: 45vh;
   background-color: $color-green;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
-  width: 28vw;
-  height: 13vh;
+  width: 41vw;
+  height: 15vh;
   background-color: $color-brown;
 
 }
 
 .miniature {
-  margin-top: 5px;
   width: 6vw;
   height: 6vw;
   background-color: $color-miniature;
