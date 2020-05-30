@@ -50,6 +50,20 @@ body {
   width: 6vw;
   height: 6vw;
   background-color: $color-miniature;
+  border-width: 2px;
+  border-color: red;
+}
+
+.frame {
+  border-style: none;
+}
+
+.display-frame {
+  border-style: solid;
+}
+
+div.miniature.frame {
+  border-style: none;
 }
 
 .miniature:hover {
@@ -57,70 +71,69 @@ body {
 }
 
 .display {
-  @include display(url(../../images/display/miniature-one.jpg));
+  @include display(url(../images/display/miniature-one.jpg));
 }
 
 .miniature-one {
-  @include display(url(../../images/miniature-one.jpg));
+  @include display(url(../images/miniature-one.jpg));
 }
 
 .miniature-two {
-  @include display(url(../../images/miniature-two.jpg));
+  @include display(url(../images/miniature-two.jpg));
 }
 
 .miniature-three {
-  @include display(url(../../images/miniature-three.jpg));
+  @include display(url(../images/miniature-three.jpg));
 }
 
 .miniature-four {
-  @include display(url(../../images/miniature-four.jpg));
+  @include display(url(../images/miniature-four.jpg));
 }
 
 .miniature-five {
-  @include display(url(../../images/miniature-five.jpg));
+  @include display(url(../images/miniature-five.jpg));
 }
 
 .miniature-six {
-  @include display(url(../../images/miniature-six.jpg));
+  @include display(url(../images/miniature-six.jpg));
 }
 
 .miniature-seven {
-  @include display(url(../../images/miniature-seven.jpg));
+  @include display(url(../images/miniature-seven.jpg));
 }
 
 .miniature-eight {
-  @include display(url(../../images/miniature-eight.jpg));
+  @include display(url(../images/miniature-eight.jpg));
 }
 
 .miniature-nine {
-  @include display(url(../../images/miniature-nine.jpg));
+  @include display(url(../images/miniature-nine.jpg));
 }
 
 .miniature-ten {
-  @include display(url(../../images/miniature-ten.jpg));
+  @include display(url(../images/miniature-ten.jpg));
 }
 
 .miniature-eleven {
-  @include display(url(../../images/miniature-eleven.jpg));
+  @include display(url(../images/miniature-eleven.jpg));
 }
 
 .miniature-twelve {
-  @include display(url(../../images/miniature-twelve.jpg));
+  @include display(url(../images/miniature-twelve.jpg));
 }
 
 .miniature-threeteen {
-  @include display(url(../../images/miniature-threeteen.jpg));
+  @include display(url(../images/miniature-threeteen.jpg));
 }
 
 .miniature-fourteen {
-  @include display(url(../../images/miniature-fourteen.jpg));
+  @include display(url(../images/miniature-fourteen.jpg));
 }
 
 .miniature-fifteen {
-  @include display(url(../../images/miniature-fifteen.jpg));
+  @include display(url(../images/miniature-fifteen.jpg));
 }
 
 .miniature-sixteen {
-  @include display(url(../../images/miniature-sixteen.jpg));
+  @include display(url(../images/miniature-sixteen.jpg));
 }
-
