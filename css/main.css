@@ -13,6 +13,12 @@
           box-sizing: inherit;
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -72,7 +78,7 @@ body {
 .content {
   width: 24vw;
   height: 42vw;
-  margin: 100px auto 0;
+  margin: 100px 50px;
   background-color: #d3d3d3;
 }
 
