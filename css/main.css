@@ -68,9 +68,9 @@ body {
 .miniature {
   width: 6vw;
   height: 6vw;
-  background-color: #ff00c8;
+  background-color: #334455;
   border-width: 1px;
-  border-color: #334455;
+  border-color: #ff0000;
 }
 
 .miniature:hover {
