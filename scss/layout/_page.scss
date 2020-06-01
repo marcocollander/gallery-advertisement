@@ -13,25 +13,25 @@ body {
   display: flex;
   width: 24vw;
   height: 24vw;
-  background-color: $color-red;
+  background-color: $color-primary;
 }
 
 .display {
   width: 18vw;
   height: 24vw;
-  background-color: $color-yellow;
+  background-color: $color-primary;
 }
 
 .container-aside {
   width: 6vw;
   height: 24vw;
-  background-color: $color-brown;
+  background-color: $color-primary;
 }
 
 .container-down {
   width: 24vw;
   height: 18vw;
-  background-color: $color-green;
+  background-color: $color-primary;
 }
 
 .row {
@@ -39,7 +39,7 @@ body {
   justify-content: space-between;
   width: 24vw;
   height: 6vw;
-  background-color: $color-brown;
+  background-color: $color-primary;
 
 }
 
@@ -48,7 +48,7 @@ body {
   height: 6vw;
   background-color: $color-miniature;
   border-width: 1px;
-  border-color: $color-red;
+  border-color: $color-primary;
 }
 
 .miniature:hover {
