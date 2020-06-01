@@ -1,29 +1,30 @@
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 0;
+  background-color: $color-third;
+  // padding: 1rem;
+  font-family: 'Oswald', sans-serif;
+  color: $color-light;
 
   h1{
     text-transform: uppercase;
     font-size: 1rem;
+    font-weight: 500;
     letter-spacing: 5px;
     word-spacing: 10px;
   }
 }
 
-header.site-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  background-color: $color-light-dark;
-  padding: 1rem;
-  font-family: 'Oswald', sans-serif;
-  color: $color-light;
-}
-
-.site-header{
+.site-nav{
   ul {
     display: flex;
+    list-style-type: none;
 
     li {
       margin-left: 4rem;

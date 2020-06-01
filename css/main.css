@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 :root {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 *,
@@ -10,12 +13,11 @@
           box-sizing: inherit;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,36 +26,32 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 0;
+  background-color: #556677;
+  font-family: 'Oswald', sans-serif;
+  color: #d3d3d3;
 }
 
 .site-header h1 {
   text-transform: uppercase;
   font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 5px;
   word-spacing: 10px;
 }
 
-header.site-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  background-color: #fdfdfd;
-  padding: 1rem;
-  font-family: 'Oswald', sans-serif;
-  color: #d3d3d3;
-}
-
-.site-header ul {
+.site-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  list-style-type: none;
 }
 
-.site-header ul li {
+.site-nav ul li {
   margin-left: 4rem;
 }
 
-.site-header ul li a {
+.site-nav ul li a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
@@ -62,7 +60,7 @@ header.site-header {
   transition: 0.2s linear;
 }
 
-.site-header ul li a:hover {
+.site-nav ul li a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -74,7 +72,7 @@ body {
 .content {
   width: 24vw;
   height: 42vw;
-  margin: 20px auto 0;
+  margin: 100px auto 0;
   background-color: #d3d3d3;
 }
 
