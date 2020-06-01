@@ -1,11 +1,11 @@
 'use strict';
 
-const display = document.querySelector('.display');
+const display = document.querySelector('.display')
 const miniature = document.getElementsByClassName('miniature');
+console.log(miniature);
 
 const arrayImages =
   [
-    // 'url(images/display/miniature-one.jpg)',
     'url(images/display/miniature-one.jpg)',
     'url(images/display/miniature-two.jpg)',
     'url(images/display/miniature-three.jpg)',
@@ -25,7 +25,7 @@ const arrayImages =
 
 let counter = 0;
 
-setInterval(() => {
+let interval = setInterval(() => {
   if (counter === arrayImages.length) {
     count(counter, ...miniature);
   }
@@ -43,6 +43,12 @@ setInterval(() => {
   }
 
 }, 1000);
+
+
+const stop = document.getElementById('stop');
+stop.addEventListener('click', ()=>{
+  clearInterval(interval);
+});
 
 function count(number, ...picture) {
   number--;
