@@ -32,25 +32,25 @@ body {
   display: flex;
   width: 24vw;
   height: 24vw;
-  background-color: #ff0000;
+  background-color: #334455;
 }
 
 .display {
   width: 18vw;
   height: 24vw;
-  background-color: #ffff00;
+  background-color: #334455;
 }
 
 .container-aside {
   width: 6vw;
   height: 24vw;
-  background-color: #b95222;
+  background-color: #334455;
 }
 
 .container-down {
   width: 24vw;
   height: 18vw;
-  background-color: #00ffaa;
+  background-color: #334455;
 }
 
 .row {
@@ -62,7 +62,7 @@ body {
           justify-content: space-between;
   width: 24vw;
   height: 6vw;
-  background-color: #b95222;
+  background-color: #334455;
 }
 
 .miniature {
@@ -70,7 +70,7 @@ body {
   height: 6vw;
   background-color: #ff00c8;
   border-width: 1px;
-  border-color: #ff0000;
+  border-color: #334455;
 }
 
 .miniature:hover {
