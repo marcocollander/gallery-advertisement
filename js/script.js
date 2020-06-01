@@ -1,6 +1,6 @@
 'use strict';
 
-const display = document.querySelector('.display')
+const displayOne = document.querySelector('.display-one')
 const miniature = document.getElementsByClassName('miniature');
 console.log(miniature);
 
@@ -25,7 +25,7 @@ const arrayImages =
 
 let counter = 0;
 
-let interval = setInterval(() => {
+function toDisplay() {
   if (counter === arrayImages.length) {
     count(counter, ...miniature);
   }
@@ -35,19 +35,28 @@ let interval = setInterval(() => {
       count(counter, ...miniature);
     }
     miniature[counter].style.borderStyle = 'solid';
-    display.style.backgroundImage = arrayImages[counter];
+    displayOne.style.backgroundImage = arrayImages[counter];
     counter++;
 
   } else {
     counter = 0;
   }
+}
 
-}, 1000);
+let interval = setInterval(toDisplay, 1000);
+let flag = true;
 
 
 const stop = document.getElementById('stop');
-stop.addEventListener('click', ()=>{
-  clearInterval(interval);
+stop.addEventListener('click', () => {
+  if (flag) {
+    clearInterval(interval);
+    flag = false;
+  } else {
+    interval = setInterval(toDisplay, 1000);
+    flag = true;
+  }
+
 });
 
 function count(number, ...picture) {
