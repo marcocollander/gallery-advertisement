@@ -1,9 +1,11 @@
 'use strict';
 
-const displayOne = document.querySelector('.display-one')
-const miniature = document.getElementsByClassName('miniature');
-console.log(miniature);
-
+const displayOne = document.querySelector('.display-one');
+const displayTwo = document.querySelector('.display-two');
+const images = document.querySelectorAll('.miniature.image');
+const pictures = document.querySelectorAll('.miniature.picture');
+console.log(images);
+console.log(pictures);
 const arrayImagesOne =
   [
     'url(images/display/miniature-one.jpg)',
@@ -33,7 +35,7 @@ const arrayImagesTwo =
     'url(images/display-two/picture-six.jpg)',
     'url(images/display-two/picture-seven.jpg)',
     'url(images/display-two/picture-eight.jpg)',
-    'url(images/display-two/picturee-nine.jpg)',
+    'url(images/display-two/picture-nine.jpg)',
     'url(images/display-two/picture-ten.jpg)',
     'url(images/display-two/picture-eleven.jpg)',
     'url(images/display-two/picture-twelve.jpg)',
@@ -43,18 +45,19 @@ const arrayImagesTwo =
     'url(images/display-two/picture-sixteen.jpg)'];
 
 let counter = 0;
+let miniatures = images;
 
-function toDisplay(...images) {
+function toDisplay(display, ...images) {
   if (counter === images.length) {
-    count(counter, ...miniature);
+    count(counter, ...miniatures);
   }
 
   if (counter < images.length) {
     if (counter >= 1) {
-      count(counter, ...miniature);
+      count(counter, ...miniatures);
     }
-    miniature[counter].style.borderStyle = 'solid';
-    displayOne.style.backgroundImage = images[counter];
+    miniatures[counter].style.borderStyle = 'solid';
+    display.style.backgroundImage = images[counter];
     counter++;
 
   } else {
@@ -63,11 +66,10 @@ function toDisplay(...images) {
 }
 
 let interval = setInterval(() => {
-  toDisplay(...arrayImagesOne);
+  toDisplay(displayOne, ...arrayImagesOne);
 }, 1000);
+
 let flag = true;
-
-
 const stopOne = document.getElementById('stop-one');
 stopOne.addEventListener('click', () => {
   if (flag) {
@@ -75,11 +77,31 @@ stopOne.addEventListener('click', () => {
     flag = false;
   } else {
     interval = setInterval(() => {
-      toDisplay(...arrayImagesOne);
+      toDisplay(displayOne, ...arrayImagesOne);
     }, 1000);
     flag = true;
   }
 
+});
+
+miniatures = pictures;
+let intervalTwo = setInterval(() => {
+  toDisplay(displayTwo, ...arrayImagesTwo);
+}, 1000);
+
+let flagTwo = true;
+
+const stopTwo = document.getElementById('stop-two');
+stopTwo.addEventListener('click', ()=>{
+  if (flag) {
+    clearInterval(intervalTwo);
+    flag = false;
+  } else {
+    intervalTwo = setInterval(() => {
+      toDisplay(displayTwo, ...arrayImagesTwo);
+    }, 1000);
+    flag = true;
+  }
 });
 
 function count(number, ...picture) {
