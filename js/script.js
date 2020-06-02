@@ -4,6 +4,8 @@ const displayOne = document.querySelector('.display-one');
 const displayTwo = document.querySelector('.display-two');
 const images = document.querySelectorAll('.miniature.image');
 const pictures = document.querySelectorAll('.miniature.picture');
+console.log(displayOne);
+console.log(displayTwo);
 console.log(images);
 console.log(pictures);
 const arrayImagesOne =
@@ -45,28 +47,31 @@ const arrayImagesTwo =
     'url(images/display-two/picture-sixteen.jpg)'];
 
 let counter = 0;
+let counterTwo = 0;
 let miniatures = images;
 
-function toDisplay(display, ...images) {
-  if (counter === images.length) {
-    count(counter, ...miniatures);
+function toDisplay(num, display, ...images) {
+  if (num === images.length) {
+    count(num, ...miniatures);
   }
 
-  if (counter < images.length) {
-    if (counter >= 1) {
-      count(counter, ...miniatures);
+  if (num < images.length) {
+    if (num >= 1) {
+      count(num, ...miniatures);
     }
-    miniatures[counter].style.borderStyle = 'solid';
-    display.style.backgroundImage = images[counter];
-    counter++;
-
-  } else {
-    counter = 0;
-  }
+    miniatures[num].style.borderStyle = 'solid';
+    display.style.backgroundImage = images[num];
+    //num++;
+    console.log(num);
+  } 
 }
 
 let interval = setInterval(() => {
-  toDisplay(displayOne, ...arrayImagesOne);
+  toDisplay(counter, displayOne, ...arrayImagesOne);
+  counter++;
+  if(counter > arrayImagesOne.length){
+   counter = 0;
+  }
 }, 1000);
 
 let flag = true;
@@ -77,7 +82,7 @@ stopOne.addEventListener('click', () => {
     flag = false;
   } else {
     interval = setInterval(() => {
-      toDisplay(displayOne, ...arrayImagesOne);
+      toDisplay(counter, displayOne, ...arrayImagesOne);
     }, 1000);
     flag = true;
   }
@@ -86,7 +91,12 @@ stopOne.addEventListener('click', () => {
 
 miniatures = pictures;
 let intervalTwo = setInterval(() => {
-  toDisplay(displayTwo, ...arrayImagesTwo);
+  toDisplay(counterTwo, displayTwo, ...arrayImagesTwo);
+  counterTwo++;
+  if(counterTwo > arrayImagesTwo.length){
+    counterTwo = 0;
+   }
+
 }, 1000);
 
 let flagTwo = true;
@@ -98,7 +108,7 @@ stopTwo.addEventListener('click', ()=>{
     flag = false;
   } else {
     intervalTwo = setInterval(() => {
-      toDisplay(displayTwo, ...arrayImagesTwo);
+      toDisplay(counterTwo, displayTwo, ...arrayImagesTwo);
     }, 1000);
     flag = true;
   }
