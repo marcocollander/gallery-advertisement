@@ -4,7 +4,7 @@ const displayOne = document.querySelector('.display-one')
 const miniature = document.getElementsByClassName('miniature');
 console.log(miniature);
 
-const arrayImages =
+const arrayImagesOne =
   [
     'url(images/display/miniature-one.jpg)',
     'url(images/display/miniature-two.jpg)',
@@ -23,19 +23,38 @@ const arrayImages =
     'url(images/display/miniature-fifteen.jpg)',
     'url(images/display/miniature-sixteen.jpg)'];
 
+const arrayImagesTwo =
+  [
+    'url(images/display-two/picture-one.jpg)',
+    'url(images/display-two/picture-two.jpg)',
+    'url(images/display-two/picture-three.jpg)',
+    'url(images/display-two/picture-four.jpg)',
+    'url(images/display-two/picture-five.jpg)',
+    'url(images/display-two/picture-six.jpg)',
+    'url(images/display-two/picture-seven.jpg)',
+    'url(images/display-two/picture-eight.jpg)',
+    'url(images/display-two/picturee-nine.jpg)',
+    'url(images/display-two/picture-ten.jpg)',
+    'url(images/display-two/picture-eleven.jpg)',
+    'url(images/display-two/picture-twelve.jpg)',
+    'url(images/display-two/picture-threeteen.jpg)',
+    'url(images/display-two/picture-fourteen.jpg)',
+    'url(images/display-two/picture-fifteen.jpg)',
+    'url(images/display-two/picture-sixteen.jpg)'];
+
 let counter = 0;
 
-function toDisplay() {
-  if (counter === arrayImages.length) {
+function toDisplay(...images) {
+  if (counter === images.length) {
     count(counter, ...miniature);
   }
 
-  if (counter < arrayImages.length) {
+  if (counter < images.length) {
     if (counter >= 1) {
       count(counter, ...miniature);
     }
     miniature[counter].style.borderStyle = 'solid';
-    displayOne.style.backgroundImage = arrayImages[counter];
+    displayOne.style.backgroundImage = images[counter];
     counter++;
 
   } else {
@@ -43,7 +62,9 @@ function toDisplay() {
   }
 }
 
-let interval = setInterval(toDisplay, 1000);
+let interval = setInterval(() => {
+  toDisplay(...arrayImagesOne);
+}, 1000);
 let flag = true;
 
 
@@ -53,7 +74,9 @@ stop.addEventListener('click', () => {
     clearInterval(interval);
     flag = false;
   } else {
-    interval = setInterval(toDisplay, 1000);
+    interval = setInterval(() => {
+      toDisplay(...arrayImagesOne);
+    }, 1000);
     flag = true;
   }
 
