@@ -68,8 +68,8 @@ let interval = setInterval(() => {
 let flag = true;
 
 
-const stop = document.getElementById('stop');
-stop.addEventListener('click', () => {
+const stopOne = document.getElementById('stop-one');
+stopOne.addEventListener('click', () => {
   if (flag) {
     clearInterval(interval);
     flag = false;
