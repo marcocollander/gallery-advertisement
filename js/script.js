@@ -4,10 +4,12 @@ const displayOne = document.querySelector('.display-one');
 const displayTwo = document.querySelector('.display-two');
 const images = document.querySelectorAll('.miniature.image');
 const pictures = document.querySelectorAll('.miniature.picture');
+
 console.log(displayOne);
 console.log(displayTwo);
 console.log(images);
 console.log(pictures);
+
 const arrayImagesOne =
   [
     'url(images/display/miniature-one.jpg)',
@@ -63,14 +65,14 @@ function toDisplay(num, display, ...images) {
     display.style.backgroundImage = images[num];
     //num++;
     console.log(num);
-  } 
+  }
 }
 
 let interval = setInterval(() => {
   toDisplay(counter, displayOne, ...arrayImagesOne);
   counter++;
-  if(counter > arrayImagesOne.length){
-   counter = 0;
+  if (counter > arrayImagesOne.length) {
+    counter = 0;
   }
 }, 1000);
 
@@ -93,16 +95,16 @@ miniatures = pictures;
 let intervalTwo = setInterval(() => {
   toDisplay(counterTwo, displayTwo, ...arrayImagesTwo);
   counterTwo++;
-  if(counterTwo > arrayImagesTwo.length){
+  if (counterTwo > arrayImagesTwo.length) {
     counterTwo = 0;
-   }
+  }
 
 }, 1000);
 
 let flagTwo = true;
 
 const stopTwo = document.getElementById('stop-two');
-stopTwo.addEventListener('click', ()=>{
+stopTwo.addEventListener('click', () => {
   if (flag) {
     clearInterval(intervalTwo);
     flag = false;

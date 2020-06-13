@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 :root {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -9,18 +8,15 @@
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .container {
   width: 100vw;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
 }
 
 .site-header {
@@ -28,14 +24,12 @@
   top: 0;
   left: 0;
   right: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: 0;
   background-color: #556677;
   font-family: 'Oswald', sans-serif;
@@ -51,7 +45,6 @@
 }
 
 .site-nav ul {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
@@ -66,13 +59,11 @@
   text-decoration: none;
   color: inherit;
   font-size: 1rem;
-  -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
 .site-nav ul li a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 body {
@@ -87,7 +78,6 @@ body {
 }
 
 .container-up {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 24vw;
@@ -114,12 +104,10 @@ body {
 }
 
 .row {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   width: 24vw;
   height: 6vw;
   background-color: #334455;
@@ -343,12 +331,10 @@ body {
 
 .control {
   width: 100vw;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   margin-top: 3vw;
 }
 
